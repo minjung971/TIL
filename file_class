@@ -32,7 +32,8 @@ public class ee21 {
 		File f3 = new File("c:\\Temp\\javasample");
 		f3.delete();
 		listDirectory(new File("c:\\Temp"));
-		f2.renameTo(new File("c:\\Temp\\javasample"));
+		//수정 전 f2.renameTo(new File("c:\\Temp\\javasample"));
+		f2.renameTo(f3);
 		listDirectory(new File("c:\\Temp"));
 	}
 
