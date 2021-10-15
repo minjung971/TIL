@@ -1,0 +1,29 @@
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+
+
+public class checktime extends JFrame {
+
+	
+	
+		public checktime() {
+			JButton b= new JButton("버튼");
+			getContentPane().add(b, BorderLayout.CENTER);
+			b.addMouseListener(new MouseAdapter() {
+				public void mousePressed(MouseEvent e) {
+					Component c = e.getSource();
+					if(e.getButton()==MouseEvent.BUTTON1) {
+						c.setBackground(Color.RED);
+					}
+					else if(e.getButton()==MouseEvent.BUTTON3) {
+						c.setBackground(Color.BLUE);
+					}
+				}
+			});
+		}
+		
+		public static void main(String [] args) {
+			new checktime();
+		}
+}
